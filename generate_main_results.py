@@ -272,7 +272,7 @@ def plot_trajectory(args, loader, generator):
 
             traj_df = pd.DataFrame(traj_arr, columns=key_list)
             traj_df_csv = traj_df
-            traj_df_csv.to_csv(",/stgat/traj_test_%d.csv" % bat_id)
+            traj_df_csv.to_csv("./visualize/stgat/traj_test_%d.csv" % bat_id)
 
             traj_arr_lst_all.append(traj_arr)
 
@@ -295,11 +295,6 @@ if __name__ == '__main__':
     torch.manual_seed(args.seed)
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
-
-    try:
-        os.mkdir("./traj_fig_stgat")
-    except FileExistsError:
-        print("file/dir already exists!")
 
     visualize(args)
     print('complete!!')

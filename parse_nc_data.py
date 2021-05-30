@@ -42,8 +42,8 @@ mpl.rc('figure',autolayout = True)
 """
 
 # TODO: 更改为合适路径
-nc_file_current = './data/raw_data/otherdatav3/current/current_hour_20191130.nc'
-nc_file_wind = './data/raw_data/otherdatav3/wind/wind_hour_2019121612.nc'
+nc_file_current = './data/raw_data/current/current_hour_20191130.nc'
+nc_file_wind = './data/raw_data/wind/wind_hour_2019121612.nc'
 
 # 数据读入
 nc_ocean=Dataset(nc_file_current)
@@ -88,5 +88,5 @@ plt.quiver(
     pivot='tail',
 )
 
-plt.savefig('wind_hour_'+str(date)+'.jpg', dpi=600)
+plt.savefig('./visualize/wind_hour_'+str(date)+'.jpg', dpi=600)
 plt.show()

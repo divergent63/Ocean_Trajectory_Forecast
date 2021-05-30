@@ -137,3 +137,10 @@ dmypy.json
 .temp/
 temp/
 
+./visualize
+.visualize/
+visualize/
+
+./checkpoint
+.checkpoint
+checkpoint/
